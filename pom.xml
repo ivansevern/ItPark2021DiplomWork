@@ -13,6 +13,8 @@
         <maven.compiler.target>17</maven.compiler.target>
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <lombok.version>1.18.22</lombok.version>
+        <junit.version>3.8.1</junit.version>
+        <mysql-connector-java.version>8.0.28</mysql-connector-java.version>
     </properties>
 
     <dependencies>
@@ -21,7 +23,17 @@
             <artifactId>lombok</artifactId>
             <version>${lombok.version}</version>
         </dependency>
-
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql-connector-java.version}</version>
+        </dependency>
     </dependencies>
 
     <build>
