@@ -5,6 +5,53 @@
     <title>Подбор сечения кабеля</title>
 </head>
 <body>
+<div>
+<!--    <div>-->
+<!--        <label for="arg1">Выберите кабель:</label>-->
+<!--        <input id="arg1" type="text" name="arg1"/>-->
+<!--    </div>-->
 
+    <p>Выберите тип кабеля</p>
+    <select name="Type">
+        <option value="Cu">Медные жилы</option>
+        <option value="Al">Алюминиевые жилы</option>
+    </select>
+
+    <p>Выберите сечение кабеля</p>
+    <select name="section">
+        <option value="1.5" >1.5</option>
+        <option value="2.5">2.5</option>
+        <option value="4">4</option>
+        <option value="6">6</option>
+        <option value="10">10</option>
+        <option value="16">16</option>
+        <option value="25">25</option>
+        <option value="35">35</option>
+        <option value="50">50</option>
+        <option value="70">70</option>
+        <option value="95">95</option>
+        <option value="120">120</option>
+        <option value="150">150</option>
+        <option value="185">185</option>
+        <option value="240">240</option>
+        <option value="300">300</option>
+        <option value="400">400</option>
+        <option value="500">500</option>
+        <option value="625">625</option>
+        <option value="800">800</option>
+        <option value="1000">1000</option>
+    </select>
+
+
+    <div>
+        <button id="calculate">Рассчитать</button>
+    </div>
+
+    <div>
+            <span id="result">
+                Расчет пока не производился
+            </span>
+    </div>
+</div>
 </body>
 </html>
