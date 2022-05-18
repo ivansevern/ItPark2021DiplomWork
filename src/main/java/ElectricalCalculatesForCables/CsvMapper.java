@@ -14,6 +14,7 @@ public class CsvMapper {
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(CsvMapper.class.getResourceAsStream("/CableAlMany.csv")))) {
             CsvToBean<CableAlMany> csvToBean = new CsvToBeanBuilder(reader)
                     .withType(CableAlMany.class)
+                    .withSeparator(';')
                     .withIgnoreLeadingWhiteSpace(true)
                     .build();
 
