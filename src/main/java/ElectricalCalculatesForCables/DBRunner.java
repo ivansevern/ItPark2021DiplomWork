@@ -1,3 +1,5 @@
+package ElectricalCalculatesForCables;
+
 import java.io.IOException;
 import java.sql.*;
 import java.util.Properties;
@@ -16,7 +18,7 @@ public class DBRunner {
 
     public static void main(String[] args) throws SQLException, IOException {
         try (final Connection connection = DriverManager.getConnection(
-                DB_SETTINGS.getProperty("jdbc.url"),
+                DB_SETTINGS.getProperty("ElectricalCalculatesForCables.jdbc.url"),
                 DB_SETTINGS.getProperty("dbCable.login"),
                 DB_SETTINGS.getProperty("dbCable.password"));
              final PreparedStatement statement = connection.prepareStatement(
