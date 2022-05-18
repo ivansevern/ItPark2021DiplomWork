@@ -31,7 +31,7 @@
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <junit.version>3.8.1</junit.version>
         <mysql-connector-java.version>8.0.28</mysql-connector-java.version>
-        <liquibase-core.version>4.7.1</liquibase-core.version>
+        <liquibase-core.version>4.8.0</liquibase-core.version>
     </properties>
 
     <dependencies>
