@@ -5,6 +5,7 @@ import lombok.experimental.UtilityClass;
 
 import java.io.IOException;
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Properties;
@@ -21,11 +22,19 @@ public class CableDb {
 //            e.printStackTrace();
 //        }
 //    }
-//
 //    @SneakyThrows(SQLException.class)
-//    public void dropBooksAndAuthorsIfExists() {
-//        try (final Connection connection = getConenection();
-//             final PreparedStatement dropIfExistsTableCableDb = connection.prepareStatement("drop table if exists cables");
-//             final PreparedStatement dropIfExistsTableCableCu = connection.prepareStatement("drop table if exists cables");
+//    public void dropIfExists() {
+//        try (final Connection connection = getConnection()) {
+//            final PreparedStatement dropIfEsistsTableCables = connection.prepareStatement("drop  if exists  table cables");
+////            final PreparedStatement dropIfEsistsTableCables = connection.prepareStatement("drop  if exists  table cables");
+//            dropIfEsistsTableCables.execute();
+//        }
+//    }
+//
+//    private Connection getConnection() throws SQLException {
+//        return DriverManager.getConnection(
+//                DB_Settings.getProperty("jdbc.url"),
+//                DB_Settings.getProperty("dbCable.login"),
+//                DB_Settings.getProperty("dbCable.password"));
 //    }
 }
