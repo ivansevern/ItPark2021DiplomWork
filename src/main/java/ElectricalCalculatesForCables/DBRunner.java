@@ -5,12 +5,11 @@ import java.sql.*;
 import java.util.Properties;
 
 public class DBRunner {
-    private static Properties DB_SETTINGS;
+    private static final Properties DB_SETTINGS = new Properties();;
 
     static {
         try {
-            DB_SETTINGS = new Properties();
-            DB_SETTINGS.load(DBRunner.class.getResourceAsStream("/dbCable.properties"));
+            DB_SETTINGS.load(DBRunner.class.getResourceAsStream("/db.properties"));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -18,16 +17,16 @@ public class DBRunner {
 
     public static void main(String[] args) throws SQLException, IOException {
         try (final Connection connection = DriverManager.getConnection(
-                DB_SETTINGS.getProperty("ElectricalCalculatesForCables.jdbc.url"),
+                DB_SETTINGS.getProperty("jdbc.url"),
                 DB_SETTINGS.getProperty("dbCable.login"),
                 DB_SETTINGS.getProperty("dbCable.password"));
              final PreparedStatement statement = connection.prepareStatement(
                      """
-                            select m.id, m.name, m.typeId, t.id, t.name, t.cableId
-                            from material m
-                            left join type t
-                            on t.typeId = t.id
-                            where m.typeId = ?
+//                            select id, material, numberOfWire, crossSection, power
+//                            from cable
+//                            left join type t
+//                            on t.typeId = t.id
+//                            where m.typeId = ?
                     """)
              ) {
             statement.setInt(1, 1);
