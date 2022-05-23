@@ -1,6 +1,7 @@
 package ElectricalCalculatesForCables.jdbc;
 
-import ElectricalCalculatesForCables.DBRunner;
+
+import ElectricalCalculatesForCables.DbRunner;
 import lombok.SneakyThrows;
 import lombok.experimental.UtilityClass;
 
@@ -18,37 +19,38 @@ public class CableDb {
 
     static {
         try {
-            DB_Settings.load(DBRunner.class.getResourceAsStream("/db.properties"));
+            DB_Settings.load(DbRunner.class.getResourceAsStream("/db.properties"));
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
     @SneakyThrows(SQLException.class)
     public void dropCableIfExists() {
         try (final Connection connection = getConnection()) {
-            final PreparedStatement dropIfEsistsTableCables = connection.prepareStatement("drop table if exists cable");
-//            final PreparedStatement dropIfEsistsTableCables = connection.prepareStatement("drop table if exists cables");
-            dropIfEsistsTableCables.execute();
+            final PreparedStatement dropIfExistsTableCables = connection.prepareStatement("drop table if exists cable");
+//            final PreparedStatement dropIfExistsTableCables = connection.prepareStatement("drop table if exists cables");
+            dropIfExistsTableCables.execute();
         }
     }
 
     @SneakyThrows(SQLException.class)
     public void createCable() {
         try (final Connection connection = getConnection()) {
-            final PreparedStatement dropIfEsistsTableCables = connection.prepareStatement(
+            final PreparedStatement dropIfExistsTableCables = connection.prepareStatement(
                     """
-                        create table cable
-                        (
-                        id int auto_increment,
-                        material varchar(10) not null,
-                        cross double,
-                        type varchar(10),
-                        power int,
-                        primary key (id)
-                        );
-                        """
+                            create table cable
+                            (                          
+                                  id           int auto_increment
+                                      primary key,
+                                  material     varchar(10) not null,
+                                  numberOfWire varchar(10) not null,
+                                  crossSection double      not null,
+                                  power        int         not null                          
+                            );
+                            """
             );
-            dropIfEsistsTableCables.execute();
+            dropIfExistsTableCables.execute();
         }
     }
 
