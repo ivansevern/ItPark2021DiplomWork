@@ -26,6 +26,5 @@ public class CableRunner {
                 }
         );
         System.out.println("Выполнение программы завершено");
-
     }
 }
