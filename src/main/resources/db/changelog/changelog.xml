@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.7.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="1653398624193-1" author="Иван (generated)">
+        <createTable tableName="cables">
+            <column autoIncrement="true" name="id" type="INT(10)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PRIMARY"/>
+            </column>
+            <column name="numberOfWire" type="VARCHAR(10)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="crossSection" type="DOUBLE(22)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="power" type="INT(10)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="material_id" type="INT(10)"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1653398624193-2" author="Иван (generated)">
+        <createTable tableName="materials">
+            <column autoIncrement="true" name="id" type="INT(10)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PRIMARY"/>
+            </column>
+            <column name="material" type="VARCHAR(10)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="1653398624193-4" author="Иван (generated)">
+        <addForeignKeyConstraint baseColumnNames="material_id" baseTableName="cables"
+                                 constraintName="cables_materials_id_fk" onDelete="RESTRICT" onUpdate="RESTRICT"
+                                 referencedColumnNames="id" referencedTableName="materials"/>
+
+        <createIndex indexName="cables_materials_id_fk" tableName="cables">
+            <column name="material_id"/>
+        </createIndex>
+    </changeSet>
+
+</databaseChangeLog>
