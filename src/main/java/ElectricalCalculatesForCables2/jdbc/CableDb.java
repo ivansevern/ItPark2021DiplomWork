@@ -127,7 +127,7 @@ public class CableDb {
         }
     }
 
-    @SneakyThrows(SQLException.class)
+ /*   @SneakyThrows(SQLException.class)
     public List<MaterialAndCable> searchByCrossSectionOrMaterialName(String text) {
         try(final Connection connection = getConnection();
             final PreparedStatement searchStatement = connection.prepareStatement("""
@@ -146,6 +146,33 @@ public class CableDb {
                 result.add(new MaterialAndCable(
                                         resultSet.getString("numberOfWire"),
                                         resultSet.getDouble("crossSection"),
+                        resultSet.getString("material"),
+                        resultSet.wasNull() ? null : resultSet.getInt("power")));
+            }
+            return result;
+        }
+    }*/
+
+    @SneakyThrows(SQLException.class)
+    public List<MaterialAndCable> searchByCrossSectionOrMaterialName(String text) {
+        try(final Connection connection = getConnection();
+            final PreparedStatement searchStatement = connection.prepareStatement("""
+                select c.numberOfWire, c.crossSection, c.power, m.material from cables c
+                left join materials m
+                on c.material_id = m.id
+                where lower(c.crossSection) like ? or lower(m.material) like ? or lower(c.numberOfWire) like ?
+                order by c.id
+            """)
+        ) {
+            searchStatement.setString(1, "%" + text + "%");
+            searchStatement.setString(2, "%" + text + "%");
+            searchStatement.setString(3, "%" + text + "%");
+            final ResultSet resultSet = searchStatement.executeQuery();
+            List<MaterialAndCable> result = new ArrayList<>();
+            while(resultSet.next()) {
+                result.add(new MaterialAndCable(
+                        resultSet.getString("numberOfWire"),
+                        resultSet.getDouble("crossSection"),
                         resultSet.getString("material"),
                         resultSet.wasNull() ? null : resultSet.getInt("power")));
             }

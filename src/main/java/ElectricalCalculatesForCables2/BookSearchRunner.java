@@ -10,7 +10,7 @@ public class BookSearchRunner {
     private static final String EXIT_PHRASE = "выход";
 
     public static void main(String[] args) {
-        System.out.println("Введите наименование искомого кабеля или имя материала");
+        System.out.println("Введите одно из: \n - сечение искомого кабеля \n - материал жил кабеля \n - число жил кабеля");
         System.out.printf("или введите %s для завершения работы программы:\n", EXIT_PHRASE);
         final Scanner scanner = new Scanner(System.in);
         while (scanner.hasNext()) {
@@ -19,7 +19,7 @@ public class BookSearchRunner {
                 return;
             }
             final List<MaterialAndCable> materialAndCables = CableDb.searchByCrossSectionOrMaterialName(text);
-            System.out.println("Подходящие книги с информацией об авторе:");
+            System.out.println("Подходящие кабели:");
             System.out.println(materialAndCables);
         }
     }
