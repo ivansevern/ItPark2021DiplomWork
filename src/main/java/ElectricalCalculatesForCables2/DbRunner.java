@@ -1,6 +1,6 @@
-package ElectricalCalculatesForCables;
+package ElectricalCalculatesForCables2;
 
-import ElectricalCalculatesForCables.dto.Employee;
+import ElectricalCalculatesForCables2.dto.Cable;
 
 import java.io.IOException;
 import java.sql.*;
@@ -21,10 +21,10 @@ public class DbRunner {
     }
 
     public static void main(String[] args) throws SQLException, IOException {
-        System.out.println(getEmployeeById(1));
+        System.out.println(getCableById(1));
     }
 
-    private static List<Employee> getEmployeeById(Integer id) throws SQLException {
+    private static List<Cable> getCableById(Integer id) throws SQLException {
         try (final Connection connection = DriverManager.getConnection(
                 DB_SETTINGS.getProperty("jdbc.url"),
                 DB_SETTINGS.getProperty("db.login"),
@@ -32,36 +32,39 @@ public class DbRunner {
              final Statement st = connection.createStatement();
              final PreparedStatement statement = connection.prepareStatement(
                      """
-                             select e.emp_id, e.emp_name, e.salary, d.name department_name 
-                             from employee e 
-                             left join department d 
-                             on e.department_id = d.id 
-                             where e.emp_id = ?
+                             select c.cab_id, c.cab_name, c.numberOfWire, c.crossSection, c.material,
+                             c.power, c1.name cable_name 
+                             from cable c 
+                             left join cable c1 
+                             on c.cable_id = c1.id 
+                             where c.cab_id = ?
                              """) // -1 or (d)
         ) {
             connection.setAutoCommit(false);
             Savepoint beforeCreate = connection.setSavepoint("beforeCreate");
 
-            st.execute("insert into department (id, name) values (156, 'New')");
+            st.execute("insert into cable (id, name) values (156, 'New')");
 
             Savepoint beforeUpdate = connection.setSavepoint("beforeUpdate");
 
-            st.execute("update department set name = 'New2' where id = 156");
+            st.execute("update cable set name = 'New2' where id = 156");
 
             statement.setInt(1, id);
-            List<Employee> employees = new ArrayList<>();
+            List<Cable> cables = new ArrayList<>();
             try (final ResultSet resultSet = statement.executeQuery()) {
                 while (resultSet.next()) {
-                    Employee employee = new Employee(resultSet.getInt("emp_id"), resultSet.getString("emp_name"),
-                            resultSet.getBigDecimal("salary"), resultSet.getString("department_name"));
-                    employees.add(employee);
+                    Cable cable = new Cable(resultSet.getInt("cab_id"), resultSet.getString("cab_name"),
+                            resultSet.getString("numberOfWire"), resultSet.getDouble("crossSection"),
+                            resultSet.getString("material"), resultSet.getInt("power"),
+                            resultSet.getString("cable_name"));
+                    cables.add(cable);
                     if (new Random().nextBoolean()) {
                         connection.rollback(beforeUpdate);
                     }
                 }
             }
             connection.commit();
-            return employees;
+            return cables;
         }
     }
 }
