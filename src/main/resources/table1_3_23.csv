@@ -1,0 +1,5 @@
+LandCharacteristics,Resistivity,CjrrectionFactor
+sand humidity more 9% sandy-clay soil moisture more 1%,80,1.05
+normal soil and sand moisture 7-9% sandy-clay soil moisture 12-14%,120,1.0
+sand humidity more 4-7% sandy-clay soil moisture more 8-12%,200,0.87
+sand humidity less 4% rocky soil,300,0.75
