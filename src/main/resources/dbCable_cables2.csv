@@ -1,0 +1,215 @@
+id,material,number_of_wire,gasket_type,cross_section,current_strength
+1,copper,one,air,1.5,22
+2,copper,one,air,2.5,30
+3,copper,one,air,4,39
+4,copper,one,air,6,50
+5,copper,one,air,10,68
+6,copper,one,air,16,89
+7,copper,one,air,25,121
+8,copper,one,air,35,147
+9,copper,one,air,50,179
+10,copper,one,air,70,226
+11,copper,one,air,95,280
+12,copper,one,air,120,326
+13,copper,one,air,150,373
+14,copper,one,air,185,431
+15,copper,one,air,240,512
+16,copper,one,air,300,591
+17,copper,one,air,400,685
+18,copper,one,air,500,792
+19,copper,one,air,630,910
+20,copper,one,air,800,1030
+21,copper,one,air,1000,1143
+22,copper,one,ground,1.5,30
+23,copper,one,ground,2.5,39
+24,copper,one,ground,4,50
+25,copper,one,ground,6,62
+26,copper,one,ground,10,83
+27,copper,one,ground,16,107
+28,copper,one,ground,25,137
+29,copper,one,ground,35,163
+30,copper,one,ground,50,194
+31,copper,one,ground,70,237
+32,copper,one,ground,95,285
+33,copper,one,ground,120,324
+34,copper,one,ground,150,364
+35,copper,one,ground,185,412
+36,copper,one,ground,240,477
+37,copper,one,ground,300,539
+38,copper,one,ground,400,612
+39,copper,one,ground,500,690
+40,copper,one,ground,630,774
+41,copper,one,ground,800,856
+42,copper,one,ground,1000,993
+43,copper,two or three,air,1.5,21
+44,copper,two or three,air,2.5,27
+45,copper,two or three,air,4,36
+46,copper,two or three,air,6,46
+47,copper,two or three,air,10,63
+48,copper,two or three,air,16,84
+49,copper,two or three,air,25,112
+50,copper,two or three,air,35,137
+51,copper,two or three,air,50,167
+52,copper,two or three,air,70,211
+53,copper,two or three,air,95,261
+54,copper,two or three,air,120,302
+55,copper,two or three,air,150,346
+56,copper,two or three,air,185,397
+57,copper,two or three,air,240,472
+58,copper,two or three,air,300,542
+59,copper,two or three,air,400,633
+60,copper,two or three,ground,1.5,27
+61,copper,two or three,ground,2.5,36
+62,copper,two or three,ground,4,47
+63,copper,two or three,ground,6,59
+64,copper,two or three,ground,10,79
+65,copper,two or three,ground,16,102
+66,copper,two or three,ground,25,133
+67,copper,two or three,ground,35,158
+68,copper,two or three,ground,50,187
+69,copper,two or three,ground,70,231
+70,copper,two or three,ground,95,279
+71,copper,two or three,ground,120,317
+72,copper,two or three,ground,150,358
+73,copper,two or three,ground,185,405
+74,copper,two or three,ground,240,471
+75,copper,two or three,ground,300,533
+76,copper,two or three,ground,400,611
+77,copper,four or five,air,1.5,20
+78,copper,four or five,air,2.5,25
+79,copper,four or five,air,4,33
+80,copper,four or five,air,6,43
+81,copper,four or five,air,10,59
+82,copper,four or five,air,16,78
+83,copper,four or five,air,25,104
+84,copper,four or five,air,35,127
+85,copper,four or five,air,50,155
+86,copper,four or five,air,70,196
+87,copper,four or five,air,95,243
+88,copper,four or five,air,120,281
+89,copper,four or five,air,150,322
+90,copper,four or five,air,185,369
+91,copper,four or five,air,240,439
+92,copper,four or five,air,300,504
+93,copper,four or five,air,400,589
+94,copper,four or five,ground,1.5,25
+95,copper,four or five,ground,2.5,33
+96,copper,four or five,ground,4,44
+97,copper,four or five,ground,6,55
+98,copper,four or five,ground,10,73
+99,copper,four or five,ground,16,95
+100,copper,four or five,ground,25,124
+101,copper,four or five,ground,35,147
+102,copper,four or five,ground,50,174
+103,copper,four or five,ground,70,215
+104,copper,four or five,ground,95,259
+105,copper,four or five,ground,120,295
+106,copper,four or five,ground,150,333
+107,copper,four or five,ground,185,377
+108,copper,four or five,ground,240,438
+109,copper,four or five,ground,300,496
+110,copper,four or five,ground,400,568
+111,aluminum,one,air,2.5,22
+112,aluminum,one,air,4,30
+113,aluminum,one,air,6,37
+114,aluminum,one,air,10,50
+115,aluminum,one,air,16,68
+116,aluminum,one,air,25,92
+117,aluminum,one,air,35,113
+118,aluminum,one,air,50,139
+119,aluminum,one,air,70,176
+120,aluminum,one,air,95,217
+121,aluminum,one,air,120,253
+122,aluminum,one,air,150,290
+123,aluminum,one,air,185,336
+124,aluminum,one,air,240,401
+125,aluminum,one,air,300,464
+126,aluminum,one,air,400,544
+127,aluminum,one,air,500,636
+128,aluminum,one,air,630,744
+129,aluminum,one,air,800,858
+130,aluminum,one,air,1000,972
+131,aluminum,one,ground,2.5,30
+132,aluminum,one,ground,4,39
+133,aluminum,one,ground,6,48
+134,aluminum,one,ground,10,63
+135,aluminum,one,ground,16,82
+136,aluminum,one,ground,25,106
+137,aluminum,one,ground,35,127
+138,aluminum,one,ground,50,150
+139,aluminum,one,ground,70,184
+140,aluminum,one,ground,95,221
+141,aluminum,one,ground,120,252
+142,aluminum,one,ground,150,283
+143,aluminum,one,ground,185,321
+144,aluminum,one,ground,240,374
+145,aluminum,one,ground,300,423
+146,aluminum,one,ground,400,485
+147,aluminum,one,ground,500,556
+148,aluminum,one,ground,630,633
+149,aluminum,one,ground,800,713
+150,aluminum,one,ground,1000,793
+151,aluminum,two or three,air,2.5,21
+152,aluminum,two or three,air,4,29
+153,aluminum,two or three,air,6,37
+154,aluminum,two or three,air,10,50
+155,aluminum,two or three,air,16,67
+156,aluminum,two or three,air,25,87
+157,aluminum,two or three,air,35,106
+158,aluminum,two or three,air,50,126
+159,aluminum,two or three,air,70,161
+160,aluminum,two or three,air,95,197
+161,aluminum,two or three,air,120,229
+162,aluminum,two or three,air,150,261
+163,aluminum,two or three,air,185,302
+164,aluminum,two or three,air,240,359
+165,aluminum,two or three,air,300,424
+166,aluminum,two or three,air,400,501
+167,aluminum,two or three,ground,2.5,28
+168,aluminum,two or three,ground,4,37
+169,aluminum,two or three,ground,6,44
+170,aluminum,two or three,ground,10,59
+171,aluminum,two or three,ground,16,77
+172,aluminum,two or three,ground,25,102
+173,aluminum,two or three,ground,35,123
+174,aluminum,two or three,ground,50,143
+175,aluminum,two or three,ground,70,178
+176,aluminum,two or three,ground,95,214
+177,aluminum,two or three,ground,120,244
+178,aluminum,two or three,ground,150,274
+179,aluminum,two or three,ground,185,312
+180,aluminum,two or three,ground,240,363
+181,aluminum,two or three,ground,300,417
+182,aluminum,two or three,ground,400,482
+183,aluminum,four or five,air,2.5,20
+184,aluminum,four or five,air,4,27
+185,aluminum,four or five,air,6,34
+186,aluminum,four or five,air,10,47
+187,aluminum,four or five,air,16,62
+188,aluminum,four or five,air,25,81
+189,aluminum,four or five,air,35,99
+190,aluminum,four or five,air,50,117
+191,aluminum,four or five,air,70,150
+192,aluminum,four or five,air,95,183
+193,aluminum,four or five,air,120,213
+194,aluminum,four or five,air,150,243
+195,aluminum,four or five,air,185,281
+196,aluminum,four or five,air,240,334
+197,aluminum,four or five,air,300,394
+198,aluminum,four or five,air,400,466
+199,aluminum,four or five,ground,2.5,26
+200,aluminum,four or five,ground,4,34
+201,aluminum,four or five,ground,6,41
+202,aluminum,four or five,ground,10,55
+203,aluminum,four or five,ground,16,72
+204,aluminum,four or five,ground,25,95
+205,aluminum,four or five,ground,35,114
+206,aluminum,four or five,ground,50,133
+207,aluminum,four or five,ground,70,166
+208,aluminum,four or five,ground,95,199
+209,aluminum,four or five,ground,120,227
+210,aluminum,four or five,ground,150,255
+211,aluminum,four or five,ground,185,290
+212,aluminum,four or five,ground,240,338
+213,aluminum,four or five,ground,300,388
+214,aluminum,four or five,ground,400,448
